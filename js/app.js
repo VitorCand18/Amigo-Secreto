@@ -32,10 +32,10 @@ function sortear(){
         }
     }
 
-    // Verifica se há pelo menos 3 amigos para o sorteio
-    if (amigos.length < 3) {
-        alert('Por favor, insira pelo menos 3 amigos para realizar o sorteio.');
-        return; // Impede o sorteio se houver menos de 3 amigos
+    // Verifica se há pelo menos 4 amigos para o sorteio
+    if (amigos.length < 4) {
+        alert('Por favor, insira pelo menos 4 amigos para realizar o sorteio.');
+        return; // Impede o sorteio se houver menos de 4 amigos
     }
 
     embaralha(amigos); // Embaralha os amigos aleatoriamente
