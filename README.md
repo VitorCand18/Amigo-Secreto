@@ -16,7 +16,7 @@ Este é um simples programa de **Amigo Secreto** em JavaScript que permite que u
     - Caso o nome seja duplicado ou esteja vazio, uma mensagem de alerta será exibida.
    
 2. **Sorteio**:
-    - Após adicionar pelo menos 3 participantes, clique no botão "Sorteiar" para gerar o sorteio de amigos secretos.
+    - Após adicionar pelo menos 4 participantes, clique no botão "Sorteiar" para gerar o sorteio de amigos secretos.
     - Caso já tenha sido realizado um sorteio, será perguntado se deseja realizar um novo sorteio.
 
 ## Tecnologias Utilizadas
