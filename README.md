@@ -23,6 +23,6 @@ Este é um simples programa de **Amigo Secreto** em JavaScript que permite que u
 
 - **HTML**: Para a estrutura da página.
 - **CSS**: Para o estilo e layout.
-- **JavaScript**: Para a funcionalidade de adicionar, remover, embaralhar e sortear os amigos secretos.
+- **JavaScript**: Para a funcionalidade de adicionar, embaralhar e sortear os amigos secretos.
 
 
