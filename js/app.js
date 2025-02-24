@@ -21,10 +21,17 @@ function adicionar() {
 
 
 function sortear(){ 
-    embaralha(amigos);
+    // Verifica se há pelo menos 3 amigos para o sorteio
+    if (amigos.length < 3) {
+        alert('Por favor, insira pelo menos 3 amigos para realizar o sorteio.');
+        return; // Impede o sorteio se houver menos de 3 amigos
+    }
+
+    embaralha(amigos); // Embaralha os amigos
     let sorteio = document.getElementById("lista-sorteio");
 
-    for(let i = 0; i < amigos.length; i++){ // O laço percorre o array 'amigos' até o penúltimo índice para evitar acessar um índice fora do array (i + 1).
+    // Realiza o sorteio e exibe o resultado
+    for(let i = 0; i < amigos.length; i++){ 
         
         if(i == amigos.length - 1){
             sorteio.innerHTML = sorteio.innerHTML + amigos[i] + ' --> ' + amigos[0] + '<br>';
@@ -33,6 +40,7 @@ function sortear(){
         }
     }
 }
+
 
 function embaralha(amigos) { // Para embaralhar o array
 
