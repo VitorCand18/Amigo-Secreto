@@ -19,6 +19,19 @@ function adicionar() {
 }
 
 function sortear(){ 
+    // Verifica se já existe um sorteio
+    let sorteio = document.getElementById("lista-sorteio");
+    
+    // Se já houver um sorteio realizado, pergunta ao usuário se deseja realizar um novo
+    if (sorteio.innerHTML.trim() !== '') {
+        const confirmar = confirm('Já existe um sorteio realizado. Deseja realizar um novo sorteio?');
+        if (!confirmar) {
+            return; // Se o usuário não confirmar, cancela o novo sorteio
+        } else {
+            sorteio.innerHTML = ''; // Limpa a lista de sorteio antes de realizar um novo sorteio
+        }
+    }
+
     // Verifica se há pelo menos 3 amigos para o sorteio
     if (amigos.length < 3) {
         alert('Por favor, insira pelo menos 3 amigos para realizar o sorteio.');
@@ -26,11 +39,9 @@ function sortear(){
     }
 
     embaralha(amigos); // Embaralha os amigos aleatoriamente
-    let sorteio = document.getElementById("lista-sorteio");
 
-    // Exibe o sorteio
+    // Exibe o novo sorteio
     for(let i = 0; i < amigos.length; i++){ 
-        
         if(i == amigos.length - 1){
             sorteio.innerHTML = sorteio.innerHTML + amigos[i] + ' --> ' + amigos[0] + '<br>'; // Conecta o último amigo com o primeiro
         } else{
@@ -38,6 +49,7 @@ function sortear(){
         }
     }
 }
+
 
 function embaralha(amigos) { // Para embaralhar o array
 
